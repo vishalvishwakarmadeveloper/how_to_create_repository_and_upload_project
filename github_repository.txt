@@ -23,7 +23,7 @@ computer download GIT- https://git-scm.com/downloads
 ..now start gitbash
 ..now put the command
 
-1. $git cd "file location path"
+1. $cd "file location path"
 
 //This is the command for GIT bash to access your project file
 which you want to push in git repository.
@@ -33,7 +33,6 @@ location file path like- E:\Vvishwakarma\ExampleProject //
 
 2. $git config --global user.name " YOUR_NAME"  
 //Just put your name for configure //
-
 
 $git config --global user.email " YOUR_EMAIL"
 // put here valid email, which one is to created the github account //
@@ -45,9 +44,8 @@ it is used for ignore the file which you don't want to put in github Repository.
 
 $git init
 
-$git commit -m "Initial Commit"
 
-$git add.
+$git add .
 // add. is used for adding your file from your local folder to github folder.
 
 

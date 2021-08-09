@@ -1,0 +1,251 @@
+Git or  Github Commands:-  WITH The Help from Vishal Vishwakarma
+ https://github.com/vishalvishwakarmadeveloper
+------------------------------------------------------------------------------------------------------------
+_____________________________________
+Step 1: Create a new Repository
+_____________________________________
+..Click the + sign in the top right corner & select new repository.
+..Name your Repository.
+..Write your description about project.
+..choose your options PUBLIC/PRIVATE.
+..select Initialize this repo with a README.
+..And Click Create Repo....
+..Now  Bhooooom You are created your own Repository..
+...In the dashboard you have see project link file.
+copy the project link of your repository.  Your repository with HTTPS/SSH.
+
+__________________________________________
+Step-2: Upload a project on Github.
+__________________________________________
+To run the command you have to install  GIT in your local
+computer download GIT- https://git-scm.com/downloads
+
+..install the git in your local machine/computer.
+..run the setup
+..now start gitbash(gitbash is CUI command user interface)
+..now put the command
+
+
+
+1. $cd "file location path"
+
+//This is the command for GIT bash to access your project file
+which you want to push in github repository.
+location file path.
+ex:- E:\Vvishwakarma\ExampleProject    //
+
+
+
+2. $git config --global user.name " YOUR_NAME"  
+//Just put your name for configure //
+
+
+
+3. $git config --global user.email " YOUR_EMAIL"
+// put here valid email, which one is to created the github account //
+
+
+4. touch.gitignore
+// it's create a folder name touch.gitignore in your local project file.
+it is used for ignore the file which you don't want to push in github Repository. just open the touch.gitignore folder(this the txt file) and then the file which you don't have to push in github,you have to write the folder name in touch.gitignore and save it.//
+
+5. $git init
+//Configure your project in Github at initial stage.   //
+
+
+6. $git add .
+// add . ($git add_.)is used for adding/track your file from your local folder into github Repo.   //
+
+
+7. $git commit -m "Initial Commit/ or your msg"
+//Snapshot your Repo files.
+*always use snapshot command in every create repo.//
+
+8. $git status
+//Check track or untrack files.  //
+
+
+9. $git remote add orgin  YOUR_SSH_Project_URL/HTTPS_project_URL
+// Your project repository URL is /HTTPS/SSH 
+ex:- $git remote add origin https://github.com/vishalvishwakarmadeveloper/example.git
+
+
+9. $cat -/.ssh/id_rsa.pub
+//(optional if your repository is SSH link then use the key)To Secure the Github Account or Repository(public/private). 
+How to create/generate Account ssh key, please visit:-shorturl.at/oqQ34 (Github.docs)//.
+
+
+10. $git push origin master
+// push your file on github, completed
+your file is on github repository.//
+
+
+
+
+_________________________________________________
+Step-3: How to Delete the file from github (Not Locally)
+_________________________________________________
+
+1. $git rm --cached filename
+//Remove the file from github. If i have a index.txt file, i want to remove the file. ex: $ git rm --cached index.txt
+
+2. $ git commit -m "Delete the index.txt file"
+//Snapshot your activity, for further help.  //
+
+3. $ git status
+// check you track/untrack files.
+
+4. $ git push origin master
+//push the file on github or push the changes on github 
+
+
+
+
+
+
+___________________________________________
+Step-4: How to add New file in Existing Project on github.
+____________________________________________
+1. $git add -A
+//To add new file on github Repo
+ex:- If i am created a new file name `index.js` -A command is take all the file in the github.
+
+
+2. $git commit -m "Adding the new file index.js"
+//Snapshot the file
+ex:- $git commit -m "index.js"
+
+3. $git status
+//check the file is on track or untrack.
+track - file is ready to go in github repo.
+untrack- file is not ready OR adding the new file.
+
+4. $git push origin master
+// push the changes on github    //
+
+
+
+________________________________________________________________
+Step-5: How to Clone Others User Repository in our Local Machine
+_______________________________________________________________
+
+1. $git clone "Repo_name_of_user/repo_url_of_User"
+// To Clone the Other Repository in your Local Machine.
+ex:- $git clone https://github.com/vishalvishwakarmadeveloper/example.git
+Now, You have successfully clone the others user repo into your machine.  //
+
+
+2. $git pull origin master
+// If  You were Cloneing my repo,In the folder there is 3 files. And After some days/month I updated some more file on my repo, So, you want to pull only new files on your machine. //
+
+
+__________________________________________________________________________________________
+Step-6: How to Make Branches, And How to Merge the Branch Project into Master Project/Head project.
+__________________________________________________________________________________________
+Branch is just a clone of your master data. 
+If 2 or more Developer is working on same Major project, For example:- The project name is  FaceChat.
+FaceChat have 2 bug issues/or new updates, So we need to fix it, Firstly I am Making the Branch of FaceChat Named FaceChat v2.0. So, my major/master project is not affected during changes/updation.
+Developer is changing/updating the data in FaceChat v2.0,If FaceChat v2.0 is successfull. Then, we have to merge the new version's data on Master Project/ Head Project.
+
+1. $git branch
+//Check The Branches
+
+
+2.$git  branch "Branch Name"
+// create a branch, Ex: $git branch FaceChat v2.0
+FaceChat v2.0 is created 
+
+3. $git checkout FaceChat v2.0
+//switched to new branch
+
+4. $git branch
+// Now you can see you are under new branch named FaceChat v2.0
+
+5. $git ls
+//Show the all files in the projects
+
+If we have to add some files on the project,file name index.js or index.css,
+so, what we do... 
+
+6. $ git status
+//showing track or untracked files
+
+7. $git add -A
+//Add untraked files
+
+8. $ git commit -m "Adding Index.js or Index.css file"
+//Snapshot complete
+
+9. $ git push origin master
+//push the changes on github.
+
+
+
+Now We have to MERGE/PUT the files from FaceChat v2.0  (Branch Project) to FaceChat  (Master Project)
+
+1. $git checkout master
+//checkout command is used for navigate each-other master to branches/ or branch to master
+now we have the access in master file(FaceChat)
+
+2. $git merge FaceChat v2.0
+// now, your FaceChat v2.0 file is merged to FaceChat.
+
+3. $ git status
+
+4. $ git commit -m "Merged the FaceChat v2.0" 
+//optional
+
+5. $ git push origin master
+//optional
+
+
+
+___________________________________________________________________________
+Step-7: git log Command
+___________________________________________________________________________
+
+Log Command is used for check the all Logs Deatil about the Project. like:- Author, create, date, time, 
+implement, add, update, delete, merge, branch, etc......
+
+1. $git log
+// Track all the details  about projects.
+
+2. $git log -2
+// track the last 2 details about projects
+Ex:- $git log -5 > track the last 5 details about projects
+
+3. $ git log --oneline
+// track the details in one line
+
+4. $git log -i
+//-i is used for ignore case sensitive
+
+5. $git log -i --author="Vishal Vishwakarma14/vishal vishwakarma14"
+// i am using -i, ignore case sensitive.    --author is for author checking
+
+6. $git log -i --grep = "Search"
+// track the file named "Search", and -i is used for ignore case sensetive
+
+7. $git log -p --grep = "search"
+//  -p is used for check the code section.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
